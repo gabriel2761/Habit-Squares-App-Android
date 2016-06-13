@@ -15,6 +15,10 @@ public class Habits {
         habits.add(habit);
     }
 
+    public Habit getHabit(int position) {
+        return habits.get(position);
+    }
+
     public int size() {
         return habits.size();
     }

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder> {
@@ -17,9 +18,11 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder> 
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        final TextView habitTitle;
 
         public ViewHolder(View view) {
             super(view);
+            habitTitle = (TextView) view.findViewById(R.id.habit_title);
             GridView gridview = (GridView) view.findViewById(R.id.gridview);
             gridview.setAdapter(new ImageAdapter(view.getContext()));
             gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,6 +43,7 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.habitTitle.setText(mHabits.getHabit(position).getName());
     }
 
     @Override

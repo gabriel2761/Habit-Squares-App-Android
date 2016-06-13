@@ -8,17 +8,27 @@
         android:layout_height="100dp"
         android:layout_margin="4dp"
         android:background="#fff">
-        <GridView
-            android:id="@+id/gridview"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:columnWidth="90dp"
-            android:numColumns="auto_fit"
-            android:verticalSpacing="10dp"
-            android:horizontalSpacing="10dp"
-            android:stretchMode="columnWidth"
-            android:gravity="center">
-        </GridView>
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/habit_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Dummy Text"/>
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="90dp"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center">
+            </GridView>
+        </LinearLayout>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

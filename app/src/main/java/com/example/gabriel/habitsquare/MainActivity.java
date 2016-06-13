@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView habitList = (RecyclerView) findViewById(R.id.habit_list);
         habitList.setHasFixedSize(true);
         habitList.setLayoutManager(new LinearLayoutManager(this));
-        habitList.setAdapter(new HabitAdapter(habits));
+        habitList.setAdapter(new HabitAdapter(this, habits));
     }
 
     @Override

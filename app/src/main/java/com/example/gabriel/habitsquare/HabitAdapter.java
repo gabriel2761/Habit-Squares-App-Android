@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder> {
 
-    private final String mHabits[];
+    private final Habits mHabits;
 
-    public HabitAdapter() {
-        mHabits = new String[]{"Day1", "Day2", "Day3"};
+    public HabitAdapter(Habits habits) {
+        mHabits = habits;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -44,7 +44,7 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-        return mHabits.length;
+        return mHabits.size();
     }
 
 }

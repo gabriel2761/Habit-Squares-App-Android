@@ -29,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Habits habits = new Habits();
+
         RecyclerView habitList = (RecyclerView) findViewById(R.id.habit_list);
         habitList.setHasFixedSize(true);
         habitList.setLayoutManager(new LinearLayoutManager(this));
-        habitList.setAdapter(new HabitAdapter());
+        habitList.setAdapter(new HabitAdapter(habits));
     }
 
     @Override

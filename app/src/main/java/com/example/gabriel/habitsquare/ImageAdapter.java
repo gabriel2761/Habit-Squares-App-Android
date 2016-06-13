@@ -44,4 +44,5 @@ public class ImageAdapter extends BaseAdapter {
         imageView.setImageResource(R.drawable.square);
         return imageView;
     }
+
 }

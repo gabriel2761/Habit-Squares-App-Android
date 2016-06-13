@@ -8,14 +8,16 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
-    private Context mContext;
+    private final Context mContext;
+    private final Habit mHabit;
 
-    public ImageAdapter(Context c) {
+    public ImageAdapter(Context c, Habit habit) {
         mContext = c;
+        mHabit = habit;
     }
 
     public int getCount() {
-        return 50;
+        return mHabit.size();
     }
 
     public Object getItem(int position) {

@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Habits habits = new Habits();
-        habits.addHabit(new Habit("Brush Teeth"));
+        Habit brushTeeth = new Habit("Brush Teeth");
+        brushTeeth.addSquare(new Square());
+        habits.addHabit(brushTeeth);
         habits.addHabit(new Habit("Practise Skating"));
 
         RecyclerView habitList = (RecyclerView) findViewById(R.id.habit_list);

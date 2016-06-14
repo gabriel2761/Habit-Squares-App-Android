@@ -2,7 +2,6 @@ package com.example.gabriel.habitsquare;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,9 +26,9 @@ public class CreateHabitActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         String habittitle = mHabitTitleEditText.getText().toString().trim();
         if (TextUtils.isEmpty(habittitle)) {
-            mHabitTitleEditText.setError("this ");
+            mHabitTitleEditText.setError("Must not be empty");
         } else {
-            Snackbar.make(v, "This works", Snackbar.LENGTH_LONG).show();
+            
         }
     }
 }

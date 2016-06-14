@@ -53,6 +53,7 @@ public class HabitAdapter extends RecyclerView.Adapter<HabitAdapter.ViewHolder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, HabitActivity.class);
+                intent.putExtra(Constant.HABIT_DETAILS, mHabits.getHabit(position));
                 Activity activity = (Activity) mContext;
                 activity.startActivity(intent);
             }
